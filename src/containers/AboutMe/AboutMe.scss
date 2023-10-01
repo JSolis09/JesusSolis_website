@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+:root {
+    --about-me-bg-image: url(/server/wp-content/uploads/2023/08/shape4-home4.png);
+}
+[data-theme="dark"] {
+    --about-me-bg-image: url(/server/wp-content/uploads/2023/08/bg-about-dark.png);
+}
+
+.js-about-me {
+    background-image: var(--about-me-bg-image);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        background-position: center center;
+        background-size: 100% auto;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        background-position: center center;
+        background-size: 600px auto;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (max-width: $breakpoint-tablet) {
+            order: 1;
+        }
+
+        &-text-stroke {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img {
+        width: 80%;
+        height: auto;
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 100%;
+        }
+        @media screen and (min-width: $breakpoint-large) {
+            width: 125%;
+        }
+    }
+}

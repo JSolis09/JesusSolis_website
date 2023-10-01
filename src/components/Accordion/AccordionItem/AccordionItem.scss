@@ -1,0 +1,87 @@
+:root {
+    --accordion-item-bg-color: var(--white);
+    --accordion-item-arrow-border-color: #FFFFFF;
+}
+
+[data-theme="dark"] {
+    --accordion-item-bg-color: #222222;
+    --accordion-item-arrow-border-color: var(--black);
+}
+
+$btn-arrow-size: 45px;
+
+.js-accordion-item {
+    position: relative;
+    &--open {
+        .js-accordion-item {
+            &__header-arrow {
+                top: calc(50% + $btn-arrow-size);
+            }
+            &__content {
+                &-wrapper {
+                    max-height: 500px;
+                    transition: max-height 0.25s ease-in;
+                    height: auto;
+                    overflow-y: auto;
+                }
+            }
+        }
+    }
+    &__header {
+        padding: 10px 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+        background-color: var(--accordion-item-bg-color);
+        border-radius: 25px;
+
+        &-heading {
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 33px;
+        }
+        &-subheading1 {
+            color: var(--text-font-color);
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 30px;
+        }
+        &-subheading2 {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-font-color);
+            line-height: 30px;
+        }
+
+        &-arrow {
+            width: $btn-arrow-size;
+            height: $btn-arrow-size;
+            border: 6px solid var(--accordion-item-arrow-border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+            top: calc(50% - $btn-arrow-size/2);
+            right: calc(-1*$btn-arrow-size/2);
+            cursor: pointer;
+            transition: all .3s;
+        }
+    }
+
+    &__content {
+        &-wrapper {
+            max-height: 0;
+            transition: max-height 0.15s ease-out;
+            overflow: hidden;
+        }
+        color: var(--text-font-color);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 20px calc(var(--padding) + 20px) 0;
+    }
+}

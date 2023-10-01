@@ -1,0 +1,27 @@
+:root {
+    --container-max-width: 1140px;
+    --content-width: Min(100%,var(--container-max-width,1140px));
+}
+
+.js-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 var(--padding-header);
+    box-sizing: border-box;
+}
+  
+@media screen and (min-width: 1300px) {
+    .js-container {
+        padding: 0;
+    }
+}
+
+.js-row {
+    display: flex;
+}
+  
+.fullwidth {
+    width: 100%;
+}

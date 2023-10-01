@@ -1,0 +1,16 @@
+:root {
+    --input-border-color: #e6e6e6;
+    --input-background-color: var(--white);
+    --input-text-color: #575757;
+}
+
+[data-theme="dark"] {
+    --input-background-color: #222222;
+    --input-text-color: var(--white);
+}
+
+.js-form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+}

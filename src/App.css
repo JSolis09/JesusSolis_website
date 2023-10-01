@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url('./assets/fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+  font-display: optional;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('./assets/fonts/RedHatDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+  font-display: optional;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+  --primary-color: #005F85;
+  --primary-color-accent: #005B80;
+  --secondary-color: #00C764;
+  --black: #000000;
+  --white: #FFFFFF;
+  
+  --body-font-color: #595959;
+  --text-font-color: #525252;
+  --link-color: #1a1b1e;
+  --heading-font-color: #1a1b1e;
+  --link-color--hover: var(--secondary-color);
+  --bg-color: var(--white);
+
+  --padding: 10px;
+  --padding-header: 24px;
+  --padding-header-mobile: 24px;
+}
+
+@media screen and (min-width: 1300px) {
+  :root {
+    --padding-header: 50px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+[data-theme="dark"] {
+  --primary-color: #00BCFF;
+  --body-font-color: var(--white);
+  --text-font-color: var(--white);
+  --bg-color: var(--black);
+  --link-color: var(--white);
+  --link-color--hover: var(--white);
+  --heading-font-color: var(--white);
 }
 
-.App-link {
-  color: #61dafb;
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Red Hat Text", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--bg-color);
+  color: var(--body-font-color);
+  font-size: 16px;
+  line-height: 1.875;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 900;
+  color: var(--heading-font-color);
 }

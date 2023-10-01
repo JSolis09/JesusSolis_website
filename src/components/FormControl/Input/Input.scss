@@ -1,0 +1,18 @@
+.js-input {
+    color: var(--input-text-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 23px;
+    padding: 9px 20px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: var(--input-background-color);
+
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 16px;
+    line-height: 1.875;
+    font-weight: 400;
+}
+
+textarea.js-input {
+    resize: none;
+}

@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+:root {
+    --stroke-color: #f1f6ff;
+    --text-stroke-color: #d8dde7;
+}
+
+[data-theme="dark"] {
+    --text-stroke-color: #444444;
+}
+
+.wrap__text_stroke {
+    position: relative;
+    padding-top: 100px;
+}
+
+.wrap__text_stroke .heading__text_stroke {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 1;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 10.4vw;
+    font-weight: 900;
+    line-height: 72px;
+    color: var(--stroke-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--text-stroke-color);
+    margin: -58px 0px 0px -24px;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        font-size: 140px;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        margin-left: -45px;
+    }
+}
+
+.wrap__text_stroke .heading__text_stroke + h2 {
+    z-index: 2;
+    position: relative;
+}
+  

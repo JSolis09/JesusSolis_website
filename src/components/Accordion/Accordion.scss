@@ -1,0 +1,15 @@
+:root {
+    --button-background-color: var(--primary-color);
+    --button-border: none;
+}
+
+[data-theme="dark"] {
+    --button-background-color: var(--transparent);
+    --button-border: 1px solid var(--white);
+}
+
+.js-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+.js-twocolumn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-tablet + 1) {
+        flex-direction: row;
+    }
+
+    .js-twocolumn__col {
+        flex-basis: 50%;
+        padding: var(--padding);
+    }
+}

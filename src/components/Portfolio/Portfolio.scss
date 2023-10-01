@@ -1,0 +1,60 @@
+@import 'swiper/swiper.min.css'; 
+@import 'swiper/css/pagination';
+@import '../../styles/variables';
+$swiper-button-size: 50px;
+
+.js-portfolio  {
+    margin: 0 calc(-1*(var(--padding) + $swiper-button-size));
+    padding: 0 calc((var(--padding) + $swiper-button-size));
+    position: relative;
+    padding-bottom: 30px;
+
+    &__swiper {
+        position: unset;
+
+        .swiper-pagination {
+            bottom: -30px;
+
+            .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                border: var(--portfolio-bullet-border);
+
+                &.swiper-pagination-bullet-active {
+                    background-color: var(--portfolio-bullet-bg);
+                }
+            }
+        }
+    }
+}
+
+.js-swiper-btn {
+    display: none;
+    width: $swiper-button-size;
+    height: $swiper-button-size;
+    border-radius: 50%;
+    background-color: var(--portfolio-arrows-bg);
+    border: var(--portfolio-arrows-border);
+    color: var(--white);
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - $swiper-button-size/2);
+    @media screen and (min-width: $breakpoint-large) {
+        display: block;
+    }
+
+    &.swiper-button-disabled {
+        display: none;
+    }
+
+    &:after {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    &--prev {
+        left: 0;
+    }
+    &--next {
+        right: 0;
+    }
+}

@@ -1,0 +1,36 @@
+.js-getInTouch {
+    margin-bottom: 100px;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0%;
+        padding: 0;
+        border: none;
+    }
+
+    &__form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    &__message {
+        border: 1px solid #270;
+        color: #270;
+        margin: 20px 0 0 0;
+        text-align: center;
+        padding: 20px;
+
+        &.error {
+            color: #D8000C;
+            border-color: #D8000C;
+        }
+    }
+
+    &__button {
+        background-color: var(--button-background-color);
+        border: var(--button-border);
+    }
+}
